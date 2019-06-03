@@ -129,10 +129,9 @@ alias gc='google-chrome'
 alias ff='firefox'
 
 alias gpom='git push origin master'
-alias gphm='git push heroku master'
-alias gpb='git push origin master && git push heroku master'
 alias gac='git add . && git commit'
-alias status='git status'
+alias st='git status'
+alias hist = log --pretty=format:'%h %ad | %s%d [%an]' --graph --date=short
 
 alias c='clear'
 
