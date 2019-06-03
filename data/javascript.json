@@ -1,0 +1,156 @@
+{	
+	"if": {
+		"prefix": "if (",
+		"scope": "javascript,typescript",
+		"body": [
+		  "if (${1:condition}) {",
+		  "\t$0",
+		  "}"
+		],
+		"description": "For Standard"
+	},
+
+	"if else": {
+		"prefix": "if else",
+		"scope": "javascript,typescript",
+		"body": [
+		  "if (${1:condition}) {",
+		  "\t$4",
+		  "} else if (${2:condition}) { ",
+		  "\t$3",
+		  "}"
+		],
+		"description": "For Standard"
+	},
+
+	"for_Semi": {
+		"prefix": "for ;",
+		"scope": "javascript,typescript",
+		"body": [
+		  "for (let i = 0; i < ${1:array}.length; i++) {",
+		  "\t$0",
+		  "}"
+		],
+		"description": "For Standard"
+	},
+
+	"for_In": {
+		"prefix": "for in",
+		"scope": "javascript,typescript",
+		"body": [
+		  "for (let ${2:key} in ${1:obj}) {",
+		  "\t$0",
+		  "}"
+		],
+		"description": "For Standard"
+	}, 
+
+	"for_Of": {
+		"prefix": "for of",
+		"scope": "javascript,typescript",
+		"body": [
+		  "for (let ${2:ele} of ${1:coll}) {",
+		  "\t$0",
+		  "}"
+		],
+		"description": "For Standard"
+	}, 
+
+
+	"Function": {
+		"prefix": "funct",
+		"scope": "javascript,typescript",
+		"body": [
+		  "function ${1:name} (${2:parameters}) {",
+		  "\t$0",
+		  "}"
+		],
+		"description": "function"
+	}, 
+
+	"Function_Var": {
+		"prefix": "var fun",
+		"scope": "javascript,typescript",
+		"body": [
+		  "var ${1:name} = function (${2:parameters}) {",
+		  "\t$0",
+		  "}"
+		],
+		"description": "function"
+	}, 
+
+	"Func Obj":{
+		"prefix": "obj fn",
+		"scope": "javascript,typescript",
+		"body": [
+		  "var ${1:objectmaker} = function (${2:property}, ${3:property}) {",
+			"var new${1:objectmaker} = {};",
+			"  new${1:objectmaker}.${2:property} = ${2:property};",
+			"  new${1:objectmaker}.${3:property} = ${3:property};",
+			"  extend(new${1:objectmaker}, ${1:objectmaker}.methods);",
+			"",
+			"  return new${1:objectmaker}",
+			"", 
+			"}",
+			"",
+			"function extend (to, from) {",
+			"  for (var key in from) {",
+			"    to[key] = from[key];",
+			"  }",
+			"};", 
+			"",
+			"${1:objectmaker}.methods = {};",
+			"//use 'this' keyword to add to methods",
+			"",
+			"${1:objectmaker}.methods.${4:method} = "
+		],
+		"description": "func. obj"
+	}, 
+
+	"Proto Obj": {
+		"prefix": "obj proto",
+		"scope": "javascript,typescript",
+		"body": [
+		  "var ${1:objectmaker} = function (${2:property}, ${3:property}) {",
+				"var new${1:objectmaker} = Object.create(${1:objectmaker}.methods);",
+				"  new${1:objectmaker}.${2:property} = ${2:property};",
+				"  new${1:objectmaker}.${3:property} = ${3:property};",
+				"",
+				"  return new${1:objectmaker};",
+				"", 
+				"};",
+				"",
+				"${1:objectmaker}.methods = {};",
+				"//use 'this' keyword to add to methods",
+				"",
+				"${1:objectmaker}.methods.${4:method} = "
+		],
+		"description": "proto obj"
+	}, 
+
+	"ES6 Obj": {
+		"prefix": "class 6",
+		"scope": "javascript,typescript",
+		"body": [
+			"class ${1:object} {",
+			"  constructor(${2:property}, ${3:property}) {",
+			"    this.${2:property} = ${2:property};",
+			"    this.${3:property} = ${3:property};",
+			"  }",
+			"",
+			"  ${4:method}(${5:params}) {",
+				"//use 'this' keyword to add to methods",
+			"  }",
+			"};",
+			"",
+			"//invoke new instances with 'new'"
+		],
+		"description": "ES6 obj"
+	}
+
+}
+
+
+
+
+
