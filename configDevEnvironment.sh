@@ -63,26 +63,12 @@ fi
 
 #print to screen and install vscode extensions - need to make sure "code" command is working before the below, that's why you need to reload the bash configurations before this point
 echo "Installing my favorite VSCode extensions:"
-code --install-extension shardulm94.trailing-spaces
-code --install-extension formulahendry.auto-rename-tag
-code --install-extension wesbos.theme-cobalt2
-code --install-extension dbaeumer.vscode-eslint
-code --install-extension donjayamanne.githistory
-code --install-extension sysoev.language-stylus
-code --install-extension ritwickdey.liveserver
 code --install-extension esbenp.prettier-vscode
-code --install-extension equimper.react-native-react-redux
-code --install-extension wayou.vscode-todo-highlight
-code --install-extension vsmobile.vscode-react-native
-code --install-extension formulahendry.auto-close-tag
-code --install-extension shardulm94.trailing-spaces
-code --install-extension robertohuertasm.vscode-icons
+code --install-extension coenraads.bracket-pair-colorizer-2
 code --install-extension msjsdiag.debugger-for-chrome
-code --install-extension formulahendry.code-runner
-code --install-extension eamodio.gitlens
-code --install-extension coenraads.bracket-pair-colorizer
-code --install-extension wix.vscode-import-cost
-code --install-extension humao.rest-client
+code --install-extension dbaeumer.vscode-eslint
+code --install-extension formulahendry.auto-close-tag
+code --install-extension wallabyjs.quokka-vscode
 
 #copy vscode user settings
 #VSCode settings location for Linux: ~/.config/Code/User
