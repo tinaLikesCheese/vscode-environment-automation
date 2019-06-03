@@ -100,6 +100,13 @@ else
     echo "FAILED to replace keybindings.json with my VSCode User Keybindings"
 fi
 
+#copy vscode user snippets
+if yes | cp -f ./data/javascript.json "/Users/student/Library/Application Support/Code/User/keybindings.json" ; then
+    echo "Replaced javascript.json with my VSCode User Snippets"
+else
+    echo "FAILED to replace javascript.json with my VSCode User Snippets"
+fi
+
 #launch vscode
 if code ; then
     echo "Launched VSCode"
