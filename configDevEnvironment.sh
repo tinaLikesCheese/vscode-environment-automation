@@ -101,7 +101,7 @@ else
 fi
 
 #copy vscode user snippets
-if yes | cp -f ./data/javascript.json "/Users/student/Library/Application Support/Code/User/keybindings.json" ; then
+if yes | cp -f ./data/javascript.json "/Users/student/Library/Application Support/Code/User/snippets/javascript.json" ; then
     echo "Replaced javascript.json with my VSCode User Snippets"
 else
     echo "FAILED to replace javascript.json with my VSCode User Snippets"
